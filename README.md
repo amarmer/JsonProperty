@@ -14,26 +14,25 @@ Any member of the class which needs to bind JSON element should be declared like
 
 For instance:
 ```C++
-#include "JsonProperty.h"
-
 struct Employee : public Json::Data
 {
     Employee() {}
-    Employee(const string& name, int salary)
+    Employee(const string& firstName, const string& lastName, int salary)
     {
-        name_ = name;
+        firstName_ = firstName;
+        lastName_ = lastName;
         salary_ = salary;
     }
 
-    JSON_PROPERTY(string, name_, "name");
+    JSON_PROPERTY(string, firstName_, "firstName");
+    JSON_PROPERTY(string, lastName_, "lastName");
     JSON_PROPERTY(int, salary_, "salary");
 };
 
-struct Manager : public Employee
+struct Manager : public Json::Data
 {
-    using Employee::Employee;
-
-    JSON_PROPERTY(vector<Employee>, employees_, "employees");
+    JSON_PROPERTY(Employee, me_, "info");
+    JSON_PROPERTY(vector<Employee>, subordinates_, "subordinates");
 };
 
 struct Department : public Json::Data
