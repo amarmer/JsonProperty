@@ -95,7 +95,9 @@ void main()
     };
 
     EmployeesByFirstName employeesByFirstName;
-    employeesByFirstName.mapFirstNameEployees_ = { {"A", {empl1, department.manager_.me_}},  {"B", {empl2}}, {"C", {empl3}} };
+    employeesByFirstName.mapFirstNameEployees_ = { 
+        {"A", {empl1, department.manager_.me_}},  {"B", {empl2}}, {"C", {empl3}} 
+    };
 
     str = employeesByFirstName.toStyledString();
     /*
