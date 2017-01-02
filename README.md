@@ -1,4 +1,4 @@
-#### JsonProperty a simple C++ framework which allows to model JSON via C++ structure
+#### JsonProperty is a simple C++ framework which allows to model JSON via C++ structure
 
 It is tested with VS2015 and Clang (LLVM 2014).
 
