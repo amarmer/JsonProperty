@@ -51,37 +51,33 @@ void main()
     Employee empl1("A", "K", 50000);
     Employee empl2("B", "L", 55000);
 
-    Manager manager;
-    manager.me_ = Employee("A", "X", 70000);
-    manager.subordinates_ = {empl1 , empl2};
+    Employee manager("A", "X", 70000);
 
     // Change manager's last name
-    manager.me_.lastName_ = "Z";
+    manager.lastName_ = "Z";
 
-    Department department("HR", manager);
+    Department department("HR", manager, { empl1, empl2 });
 
     // Add employee
     Employee empl3;
     empl3.init("{\"firstName\":\"C\",\"lastName\":\"M\",\"salary\":57000}");
 
-    vector<Employee> subordinates = manager.subordinates_;
-    subordinates.push_back(empl3);
+    vector<Employee> employees = department.employees_;
+    employees.push_back(empl3);
 
-    department.manager_.subordinates_ = subordinates;
+    department.employees_ = employees;
 
     string str = department.toStyledString();
     /*
     JSON of 'department':
     {
         "department" : "HR",
-        "manager" : {
-            "info" : { "firstName" : "A", "lastName" : "Z", "salary" : 75000 },
-            "subordinates" : [
-                { "firstName" : "A", "lastName" : "K", "salary" : 50000 },
-                { "firstName" : "B", "lastName" : "L", "salary" : 55000 },
-                { "firstName" : "C", "lastName" : "M", "salary" : 57000 }
-            ]
-        }
+        "employees" : [
+            { "firstName" : "A", "lastName" : "K", "salary" : 50000 },
+            { "firstName" : "B", "lastName" : "L", "salary" : 55000 },
+            { "firstName" : "C", "lastName" : "M", "salary" : 57000 }
+        ],
+        "manager" : { "firstName" : "A", "lastName" : "Z", "salary" : 70000 }
     }    
     */
 
@@ -92,7 +88,7 @@ void main()
 
     EmployeesByFirstName employeesByFirstName;
     employeesByFirstName.mapFirstNameEployees_ = { 
-        {"A", {empl1, department.manager_.me_}},  {"B", {empl2}}, {"C", {empl3}} 
+        {"A", {empl1, department.manager_}},  {"B", {empl2}}, {"C", {empl3}} 
     };
 
     str = employeesByFirstName.toStyledString();
