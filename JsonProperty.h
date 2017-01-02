@@ -333,7 +333,7 @@ namespace Json
     // A class which maps Json to C++ structure should be derived from 'Json::Data' 
     struct Data : public Info
     {
-//    protected:
+    protected:
         // A member of class derived from 'Json::Data' and accesses Json should type 'JsonProperty'
         template <typename T>
         struct JsonProperty : public JsonPropertyBase<std::is_base_of<Data, T>::value, T>
