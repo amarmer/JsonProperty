@@ -54,10 +54,10 @@ int main(int argc, char* argv[])
     Employee empl3;
     empl3.init("{\"firstName\":\"C\",\"lastName\":\"M\",\"salary\":57000}");
 
-    vector<Employee> employees = manager.subordinates_;
-    employees.push_back(empl3);
+    vector<Employee> subordinates = manager.subordinates_;
+    subordinates.push_back(empl3);
 
-    department.manager_.subordinates_ = employees;
+    department.manager_.subordinates_ = subordinates;
 
     // 'Manager' reference (when changed, 'department' data is updated)
     Manager& managerReference = department.manager_;
