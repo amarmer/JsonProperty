@@ -9,7 +9,7 @@ To parse and access JSON, used popular "jsoncpp" framework (but could be used an
 
 Any class which needs to model JSON should be derived from Json::Data.
 
-Any member 'm' of the class which needs to bind JSON element should be declared like ```JsonProperty<type> m{key(jsonKey)};``` or for simplicity via macro ```JSON_PROPERTY(type, m, jsonKey)```. 
+Any member of the class which needs to bind JSON element should be declared like ```JsonProperty<type> m{key(jsonKey)};``` or for simplicity via macro ```JSON_PROPERTY(type, m, jsonKey)```. 
 
 For instance:
 ```C++
