@@ -71,7 +71,7 @@ void main()
 
     department.manager_.employees_ = employees;
     
-       string str = department.toString();
+    string str = department.toString();
     /*
     JSON of 'department':
     {
