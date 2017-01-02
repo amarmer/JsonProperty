@@ -334,7 +334,7 @@ namespace Json
     struct Data : public Info
     {
     protected:
-        // A member of class derived from 'Json::Data' and accesses Json should type 'JsonProperty'
+        // A member of class derived from 'Json::Data' and accesses JSON should type 'JsonProperty'
         template <typename T>
         struct JsonProperty : public JsonPropertyBase<std::is_base_of<Data, T>::value, T>
         {
