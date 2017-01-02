@@ -8,7 +8,7 @@ JsonProperty is a framework which allows to model JSON to C++.
 To parse and access JSON, used popular "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp without modifications, 
 (but could be used any other framework).
 
-Any class which needs to be model JSON should be derived from Json::Data.
+Any class which needs to model JSON should be derived from Json::Data.
 Any member of the class which needs bind JSON element should be declared like JsonProperty<type> member{key(jsonKey)}; 
 For instance: JsonProperty<string> name{key("firstName")}; 
 Instead of JsonProperty<type> member{key(jsonKey)}, for simplicity can be used macro JSON_PROPERTY(type, member, jsonKey).
