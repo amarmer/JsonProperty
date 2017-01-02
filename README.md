@@ -1,10 +1,10 @@
-#### JsonProperty a simple C++ framework which allows to map JSON to C++ structure
+#### JsonProperty a simple C++ framework which allows to model JSON via C++ structure
 
 It is tested with VS2015 and Clang (LLVM 2014).
 
 There are several C++ frameworks which allow parse and access JSON.   
 
-JsonProperty is a framework which allows to map JSON to C++. 
+JsonProperty is a framework which allows to model JSON to C++. 
 
 For instance:
 ```C++
@@ -39,4 +39,44 @@ struct Department : public Json::Data
     JSON_PROPERTY(string, name_, "department");
     JSON_PROPERTY(Manager, manager_, "manager");
 };
+```
+
+How it can be used:
+```C++
+    Employee empl1("A", 50000);
+    Employee empl2("B", 55000);
+
+    Manager manager("X", 70000);
+    manager.employees_ = {empl1 , empl2};
+
+    // Change manager's last name
+    manager.name_ = "Z";
+
+    Department department("HR", manager);
+
+    // Add employee
+    Employee employee3;
+    employee3.init("{\"name\":\"C\",\"salary\":57000}");
+
+    vector<Employee> employees = manager.employees_;
+    employees.push_back(employee3);
+
+    department.manager_.employees_ = employees;
+    
+       string str = department.toString();
+    /*
+    JSON of 'department':
+    {
+    "department": "HR",
+    "manager": {
+        "employees": [
+            { "name": "A", "salary": 50000}, 
+            { "name": "B", "salary": 55000}, 
+            { "name": "C", "salary": 57000}
+        ],
+        "name": "Z",
+        "salary": 70000
+        }
+    }
+    */
 ```
