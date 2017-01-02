@@ -47,7 +47,7 @@ struct Department : public Json::Data
 };
 ```
 
-Example how it can be used:
+Example of how these classess can be used:
 ```C++
 void main()
 {
