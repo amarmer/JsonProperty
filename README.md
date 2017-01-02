@@ -47,8 +47,10 @@ struct Department : public Json::Data
 };
 ```
 
-How it can be used:
+Example how it can be used:
 ```C++
+void main()
+{
     Employee empl1("A", 50000);
     Employee empl2("B", 55000);
 
@@ -85,4 +87,5 @@ How it can be used:
         }
     }
     */
+} 
 ```
