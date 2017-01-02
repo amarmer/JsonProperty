@@ -29,22 +29,18 @@ struct Employee : public Json::Data
     JSON_PROPERTY(int, salary_, "salary");
 };
 
-struct Manager : public Json::Data
-{
-    JSON_PROPERTY(Employee, me_, "info");
-    JSON_PROPERTY(vector<Employee>, subordinates_, "subordinates");
-};
-
 struct Department : public Json::Data
 {
-    Department(const string& name, const Manager& manager)
+    Department(const string& name, const Employee& manager, const vector<Employee>& employees = vector<Employee>())
     {
         name_ = name;
         manager_ = manager;
+        employees_ = employees;
     }
 
     JSON_PROPERTY(string, name_, "department");
-    JSON_PROPERTY(Manager, manager_, "manager");
+    JSON_PROPERTY(Employee, manager_, "manager");
+    JSON_PROPERTY(vector<Employee>, employees_, "employees");
 };
 ```
 
