@@ -57,14 +57,14 @@ int main(int argc, char* argv[])
 
     department.manager_.employees_ = employees;
 
-    // 'Manager' copy (when changed, it won't affect 'department')
-    Manager managerCopy = department.manager_;
-    managerCopy.salary_ = 100000;
-
     // 'Manager' reference (when changed, 'department' data is updated)
     Manager& managerReference = department.manager_;
     managerReference.salary_ = 75000;
 
+    // 'Manager' copy (when changed, it won't affect 'department')
+    Manager managerCopy = department.manager_;
+    managerCopy.salary_ = 100000;
+ 
     string str = department.toString();
     /*
     JSON of 'department':
