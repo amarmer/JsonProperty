@@ -19,7 +19,7 @@ struct Employee : public Json::Data
 
 struct Department : public Json::Data
 {
-    Department(const string& name, const Employee& manager, const vector<Employee>& employees = vector<Employee>())
+    Department(const string& name, const Employee& manager, const vector<Employee>& employees)
     {
         name_ = name;
         manager_ = manager;
