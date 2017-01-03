@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-// Json-cpp amalgated header (https://github.com/open-source-parsers/jsoncpp)
+// "json.h" is from "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp. Json::Value is defined in "json.h" 
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
