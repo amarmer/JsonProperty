@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-// "json.h" is from "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp. Json::Value is defined in "json.h". 
+// "json.h" is from "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp. Json::Value is defined in "json.h" 
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
@@ -338,7 +338,7 @@ namespace Json
     struct Data : public Info
     {
     protected:
-        // A member of class which accesses JSON should type 'JsonProperty'
+        // A member of class which accesses JSON should have type 'JsonProperty'
         template <typename T>
         struct JsonProperty : public JsonPropertyBase<std::is_base_of<Data, T>::value, T>
         {
