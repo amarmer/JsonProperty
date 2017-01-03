@@ -1,11 +1,14 @@
 #### How to implement C# JsoProperty in C++
 
 C# has JsonProperty attribute, for instance:
+
+```C++
 public class Person
 {
     [JsonProperty("name")]
     public string Name { get; set; }
 }
+```
 
 JsonProperty.h implements an approach how any C++ JSON library (which allows parse and access JSON) can be extended to implement C# JsonProerty functionality. 
 
