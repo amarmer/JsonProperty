@@ -6,7 +6,7 @@ There are several C++ frameworks which allow to parse and access JSON.
 
 JsonProperty is a framework which allows to model JSON via C++. It is similar to C# JsonProperty.
 
-To parse and access JSON, used popular "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp without modifications (but could be used any other framework).
+To parse and access JSON, used popular "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp)  without modifications (but could be used any other framework).
 
 Any class which needs to model JSON should be derived from Json::Data.
 
