@@ -15,6 +15,7 @@ JsonProperty.h implements an approach how any C++ JSON library (which allows par
 As example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
 
 
+
 Any class which needs to model JSON should be derived from Json::Data.
 
 Any member of the class which needs to bind JSON element should be declared like ```JsonProperty<type> m{key(jsonKey)};``` or for simplicity via macro ```JSON_PROPERTY(type, m, jsonKey)```. 
