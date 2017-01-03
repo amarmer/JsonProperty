@@ -1,4 +1,4 @@
-#### How to implement C# JsoProperty in C++
+#### C# JsonProperty implementation in C++
 
 C# has JsonProperty attribute, for instance:
 
