@@ -12,7 +12,7 @@ public class Person
 
 JsonProperty.h implements an approach of how any C++ JSON library (which allows parse and access JSON) can be extended to implement C# JsonProerty functionality. 
 
-As example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
+As an example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
 
 Bellow is example of how C++ JsonProperty can be used.
 
