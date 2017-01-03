@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-// "json.h" is from "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp. Json::Value is defined in "json.h" 
+// "json.h" is from "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp. Json::Value is defined in "json.h". 
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
