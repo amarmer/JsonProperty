@@ -1,6 +1,6 @@
 #### C# JsonProperty implementation in C++
 
-C# has JsonProperty attribute, for instance:
+C# has JsonProperty attribute, which allows to model JSON in C#, for instance:
 
 ```C++
 public class Person
