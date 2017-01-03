@@ -4,14 +4,16 @@
 #include <vector>
 #include <map>
 
-/// For JSON parsing and access is used 'jsoncpp' framework: https://github.com/open-source-parsers/jsoncpp
-// Json::Value is part of the 'jsoncpp' framework  
+/// Json-cpp amalgated header (http://jsoncpp.sourceforge.net/).
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
 #define JSON_PROPERTY(t, m, k)  JsonProperty<t> m{key(k)}; 
 
-// For convinience is used the same namespace 'Json' as 'jsoncpp' framework uses 
+#ifndef COMMA
+    #define COMMA ,
+#endif
+
 namespace Json
 {
     // 'toJsonValue' functions convert a 'value' to 'Json::Value'
@@ -41,7 +43,7 @@ namespace Json
 
         for (auto it = value.begin(); it != value.end(); ++it)
         {
-            json[it->first] = it->second;
+            json[it->first] = toJsonValue(it->second);
         }
 
         return json;
@@ -416,4 +418,3 @@ namespace Json
         }
     };
 }
-
