@@ -1,12 +1,16 @@
-#### JsonProperty is a simple C++ framework which allows to model JSON via C++ structure
+#### How to implement C# JsoProperty in C++
 
-It is tested with VS2015 and Clang (LLVM 2014).
+C# has JsonProperty attribute, for instance:
+public class Person
+{
+    [JsonProperty("name")]
+    public string Name { get; set; }
+}
 
-There are several C++ frameworks which allow to parse and access JSON.   
+JsonProperty.h implements an approach how any C++ JSON library (which allows parse and access JSON) can be extended to implement C# JsonProerty functionality. 
 
-JsonProperty is a framework which allows to model JSON via C++. It is similar to C# JsonProperty.
+As example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
 
-To parse and access JSON, used popular "jsoncpp" framework https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp)  without modifications (but could be used any other framework).
 
 Any class which needs to model JSON should be derived from Json::Data.
 
