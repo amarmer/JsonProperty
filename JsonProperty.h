@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-/// Json-cpp amalgated header (http://jsoncpp.sourceforge.net/).
+// Json-cpp amalgated header (https://github.com/open-source-parsers/jsoncpp)
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
