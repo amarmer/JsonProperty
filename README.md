@@ -21,7 +21,7 @@ public:
 }
 ```
 
-JsonProperty.h can be implemented using any C++ JSON library (which allows parse and access JSON). As an example is implemented using a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
+JsonProperty.h can be implemented using any C++ JSON library (which allows parse and access JSON). As an example it is implemented using a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp).
 
 Bellow is an example of how C++ JsonProperty can be used.
 
