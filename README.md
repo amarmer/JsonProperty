@@ -11,7 +11,6 @@ public class Person
 ```
 
 JsonProperty.h contains implementation of C++ JsonProperty which emulates C# JsonProperty.
-This is how C++ class looks like:
 
 ```C++
 class Person: public Json::Data
