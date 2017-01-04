@@ -70,7 +70,7 @@ namespace Json
     };
 
 
-    // 'Utils' has 'fromJsonValue' and 'isValid' functions which are implememented for Json all types
+    // 'Utils' has 'fromJsonValue' and 'isValid' functions which are implememented for all Json types
     template <typename T>
     struct Utils {};
 
