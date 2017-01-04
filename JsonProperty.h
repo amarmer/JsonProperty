@@ -218,7 +218,6 @@ namespace Json
     };
 
 
-
     // 'Info' is common auxiliary for 'Json::Data' and 'JsonProperty'
     struct Info
     {
@@ -268,7 +267,6 @@ namespace Json
     };
 
 
-
     // 'JsonPropertyBase' is base class of 'JsonProperty' if 'T' is derived from 'Json::Data'
     template <bool isData, typename T>
     struct JsonPropertyBase: public T
@@ -303,7 +301,6 @@ namespace Json
     };
 
 
-
     // 'JsonPropertyBase' is base class of 'JsonProperty' if 'T' is basic Json type
     template <typename T>
     struct JsonPropertyBase<false, T>: public Info
@@ -335,7 +332,6 @@ namespace Json
             return Utils<T>::isValid(jsonValue());
         }
     };
-
 
 
     // A class which maps Json to C++ structure should be derived from 'Json::Data' 
