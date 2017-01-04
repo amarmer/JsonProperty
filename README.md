@@ -14,7 +14,7 @@ JsonProperty.h implements an approach of how any C++ JSON library (which allows 
 
 As an example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp), which allows to parse and access JSON.
 
-Bellow is example of how C++ JsonProperty can be used.
+Bellow is an example of how C++ JsonProperty can be used.
 
 Any class which needs to model JSON should be derived from Json::Data.
 
