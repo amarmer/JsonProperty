@@ -91,7 +91,7 @@ void main()
 
     struct EmployeesByFirstName : public Json::Data
     {
-        JSON_PROPERTY(map<string COMMA vector<Employee>>, mapFirstNameEployees_, "firstNameEployees");
+        JSON_PROPERTY(unordered_map<string COMMA vector<Employee>>, mapFirstNameEployees_, "firstNameEployees");
     };
 
     EmployeesByFirstName employeesByFirstName;
