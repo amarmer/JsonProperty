@@ -10,7 +10,7 @@ public class Person
 }
 ```
 
-JsonProperty.h implements an approach of how any C++ JSON library (which allows parse and access JSON) can be extended to implement C# JsonProerty functionality. This is how JsonProperty C++ class looks like:
+Bellow is how C++ class looks like:
 
 ```C++
 class Person: public Json::Data
@@ -20,6 +20,7 @@ public:
 }
 ```
 
+JsonProperty.h implements an approach of how any C++ JSON library (which allows parse and access JSON) can be extended to implement C# JsonProerty functionality. 
 
 As an example is used a popular C++ JSON library "jsoncpp" https://github.com/open-source-parsers/jsoncpp (json.h and jsoncpp.cpp), which allows to parse and access JSON.
 
