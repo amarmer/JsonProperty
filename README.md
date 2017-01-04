@@ -10,7 +10,7 @@ public class Person
 }
 ```
 
-Bellow is how C++ class looks like:
+This is how C++ class looks like:
 
 ```C++
 class Person: public Json::Data
