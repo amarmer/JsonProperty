@@ -8,11 +8,14 @@
 #define JSON_IS_AMALGAMATION 0
 #include "json.h"
 
-#define JSON_PROPERTY(t, m, k)  JsonProperty<t> m{key(k)}; 
+struct ResolveCommaInType
+{
+    template <typename T> explicit operator T();
+};
 
-#ifndef COMMA
-    #define COMMA ,
-#endif
+#define RESOLVE_COMMA_IN_TYPE(type) decltype(type (ResolveCommaInType()))
+
+#define JSON_PROPERTY(t, m, k)  JsonProperty<RESOLVE_COMMA_IN_TYPE(t)> m{key(k)}; 
 
 namespace Json
 {
